@@ -1,10 +1,10 @@
 # 🚀 FPL Test: Frame Per Layer Performance Benchmark
 
-**FPL Test** is a sleek, browser-based performance and stress testing tool designed to measure the **rendering capability and stability** of any device's browser by dynamically spawning and animating a growing number of objects (balls) until the frame rate drops to a critically low level.
+**FPL Test** is a sleek, browser-based performance and stress testing tool designed to measure the **rendering capability and stability** of any device's browser by dynamically spawning and animating a growing number of objects (white balls) until the frame rate drops to a critically low level.
 
 Created and Maintained by **Sliz®**.
 
-
+Official *website for testing your device*: [**FPL**](https://fpl.pp.ua)
 
 ---
 
